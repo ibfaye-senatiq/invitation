@@ -65,14 +65,14 @@ window.INVITATION = {
      Avec un serveur (Google Apps Script, Formspree, Make…), collez l'URL dans
      endpoint : la réponse y sera envoyée en POST et WhatsApp ne sera pas ouvert. */
   rsvp: {
-    whatsapp: '221781101620',
+    whatsapp: '+14188086074',
     endpoint: '',
   },
 
   /* ---------- Contacts (page « Merci ») ---------- */
   contacts: [
-    { nom: 'Fadel', numero: '221772653784' },
-    { nom: 'Fatou Binetou', numero: '0014188086074' },
+    { nom: 'Fadel', numero: '+221772653784' },
+    { nom: 'Fatou Binetou', numero: '+14188086074' },
   ],
 
   /* ---------- Photo de la page « Notre jour » (facultatif) ----------
