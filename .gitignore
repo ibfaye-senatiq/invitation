@@ -1,0 +1,7 @@
+# Fichiers de travail
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Le projet n'a aucune dépendance : rien d'autre à ignorer.

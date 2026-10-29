@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<title>Aperçu du lien (1200×630)</title>
+<!-- Carte d'aperçu pour WhatsApp / réseaux sociaux.
+     Génération : msedge --headless --window-size=1200,630 --screenshot=assets/apercu.png tools/apercu-social.html -->
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400&family=Cormorant+Garamond:wght@400;500&family=Pinyon+Script&display=swap");
+  html, body { margin: 0; height: 100%; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: #f6efe4 url("../assets/papier.svg") repeat; background-size: 600px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    color: #4a1a22;
+    display: grid; place-items: center;
+    position: relative;
+  }
+  .cadre { position: absolute; inset: 26px; border: 1px solid rgba(181, 143, 85, .45); }
+  .cadre::after { content: ""; position: absolute; inset: 6px; border: 1px solid rgba(181, 143, 85, .18); }
+  .corner { position: absolute; width: 230px; }
+  .tl { top: 0; left: 0; }
+  .br { bottom: 0; right: 0; transform: scale(-1); }
+  .centre { position: relative; text-align: center; padding: 0 60px; }
+  .bismillah { font-family: "Amiri", serif; font-size: 30px; color: #5e1420; margin: 0 0 2px; }
+  .sur { font-size: 13px; letter-spacing: .42em; text-transform: uppercase; color: #6e4a4f; margin: 0; }
+  .noms { font-family: "Pinyon Script", cursive; font-size: 104px; line-height: 1; color: #5e1420; margin: 8px 0 0; }
+  .noms b { color: #b58f55; font-weight: 400; font-size: .5em; }
+  .filet { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 14px 0 10px; color: #b58f55; }
+  .filet i { display: block; width: 90px; height: 1px; background: linear-gradient(90deg, transparent, currentColor); }
+  .filet i:last-child { transform: scaleX(-1); }
+  .filet s { width: 8px; height: 8px; transform: rotate(45deg); border: 1px solid currentColor; background: #5e1420; }
+  .date { font-size: 24px; letter-spacing: .3em; text-transform: uppercase; color: #5e1420; margin: 0; }
+  .lieu { font-size: 21px; color: #6e4a4f; margin: 8px 0 0; }
+</style>
+<img class="corner tl" src="../assets/filigrane-coin.svg" alt="">
+<img class="corner br" src="../assets/filigrane-coin.svg" alt="">
+<div class="cadre"></div>
+<div class="centre">
+  <p class="bismillah">&#xFDFD;</p>
+  <p class="sur">Une invitation pour vous</p>
+  <p class="noms">Ibrahima <b>&amp;</b> Fatima</p>
+  <div class="filet"><i></i><s></s><i></i></div>
+  <p class="date">Samedi 31 octobre 2026</p>
+  <p class="lieu">Maison Madera · Almadies, Dakar</p>
+</div>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<title>Recette visuelle — invitation</title>
+<!-- Banc de recette : affiche l'invitation dans une iframe à la taille d'un téléphone
+     (ou d'un ordinateur) pour contrôler chaque chapitre sans ouvrir d'onglet.
+     Usage : http://localhost:8765/tools/apercu.html?c=programme&w=390&h=844 -->
+<style>
+  body { margin: 0; padding: 14px; background: #e7dfd2; display: flex; gap: 18px; align-items: flex-start;
+         font: 13px/1.4 system-ui, sans-serif; }
+  figure { margin: 0; }
+  figcaption { padding: 4px 2px 8px; color: #55403a; letter-spacing: .06em; }
+  iframe { border: 0; display: block; background: #f6efe4;
+           box-shadow: 0 10px 30px rgba(63, 11, 21, .22); border-radius: 10px; }
+</style>
+<script>
+  const p = new URLSearchParams(location.search);
+  const chapitre = p.get("c") || "accueil";
+  const w = p.get("w") || 390;
+  const h = p.get("h") || 844;
+  const src = "../index.html?ouvert=1&chapitre=" + encodeURIComponent(chapitre) +
+              (p.get("photo") ? "&photo=" + encodeURIComponent(p.get("photo")) : "");
+  document.write(
+    '<figure><figcaption>' + chapitre + " · " + w + "×" + h + "</figcaption>" +
+    '<iframe src="' + src + '" width="' + w + '" height="' + h + '"></iframe></figure>'
+  );
+  if (p.has("large")) {
+    document.write(
+      '<figure><figcaption>' + chapitre + " · 1280×860</figcaption>" +
+      '<iframe src="' + src + '" width="1280" height="860"></iframe></figure>'
+    );
+  }
+  if (p.has("enveloppe")) {
+    document.write(
+      '<figure><figcaption>ouverture · ' + w + "×" + h + "</figcaption>" +
+      '<iframe src="../index.html" width="' + w + '" height="' + h + '"></iframe></figure>'
+    );
+  }
+</script>
+</html>
