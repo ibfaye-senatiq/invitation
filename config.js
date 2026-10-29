@@ -71,8 +71,8 @@ window.INVITATION = {
 
   /* ---------- Contacts (page « Merci ») ---------- */
   contacts: [
-    { nom: 'Fadel', numero: '221781101620' },
-    { nom: 'Fatou Binetou', numero: '221785469101' },
+    { nom: 'Fadel', numero: '221772653784' },
+    { nom: 'Fatou Binetou', numero: '0014188086074' },
   ],
 
   /* ---------- Photo de la page « Notre jour » (facultatif) ----------
