@@ -42,7 +42,7 @@ window.INVITATION = {
   /* ---------- Le programme ----------
      icones disponibles : accueil · alliances · diner · lune · priere · photo · musique */
   programme: {
-    jour: 'Samedi 31 octobre 2026',
+    jour: 'Samedi 9 janvier 2027',
     etapes: [
       { heure: '16h00', libelle: 'Accueil & mise en place', icone: 'accueil' },
       { heure: '17h15', libelle: 'Takk', icone: 'alliances' },

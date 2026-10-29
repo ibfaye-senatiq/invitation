@@ -38,9 +38,26 @@
 <div class="centre">
   <p class="bismillah">&#xFDFD;</p>
   <p class="sur">Une invitation pour vous</p>
-  <p class="noms">Ibrahima <b>&amp;</b> Fatima</p>
+  <p class="noms"><span id="a">Fadel</span> <b>&amp;</b> <span id="b">Fatou Bintou</span></p>
   <div class="filet"><i></i><s></s><i></i></div>
-  <p class="date">Samedi 31 octobre 2026</p>
-  <p class="lieu">Maison Madera · Almadies, Dakar</p>
+  <p class="date" id="date">Samedi 9 janvier 2027</p>
+  <p class="lieu" id="lieu">Maison Madera · Almadies, Dakar</p>
 </div>
+<script src="../config.js"></script>
+<script>
+  // Hydratation depuis config.js : la carte d'aperçu ne peut pas se désynchroniser de l'invitation.
+  const C = window.INVITATION || {};
+  const poser = (id, valeur) => {
+    const el = document.getElementById(id);
+    if (el && typeof valeur === "string" && valeur) el.textContent = valeur;
+  };
+  poser("a", C.prenoms && C.prenoms.a);
+  poser("b", C.prenoms && C.prenoms.b);
+  poser("date", C.dateLongue);
+  if (C.lieu) poser("lieu", `${C.lieu.nom} · ${String(C.lieu.detail).split(" · ")[0]}`);
+  // un nom long rétrécit pour rester dans le cadre
+  const noms = document.querySelector(".noms");
+  const long = ((C.prenoms && C.prenoms.a) || "").length + ((C.prenoms && C.prenoms.b) || "").length;
+  if (noms && long > 14) noms.style.fontSize = "76px";
+</script>
 </html>
