@@ -229,35 +229,52 @@ button { font: inherit; color: inherit; }
 .rabat-dos { transform: rotateY(180deg); }
 
 /* le sceau */
+/* Le médaillon de cire n'est PAS au centre géométrique du fichier : les rubans pendent
+   en bas, et la cire est centrée sur 45,6 % × 33,97 % de la vue (500 × 580).
+   On ancre ce point précis sur la pointe du rabat — sinon le sceau flotte au-dessus
+   du rabat et les rubans débordent sur le papier. */
 .sceau-zone {
   position: absolute; left: 50%; top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-45.6%, -33.97%);
   z-index: 4;
-  width: 30%;
-  aspect-ratio: 1;
+  width: 46%;
+  aspect-ratio: 500 / 580;
 }
 .sceau {
   position: relative;
   width: 100%; height: 100%;
   border: 0; padding: 0; background: none; cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  filter: drop-shadow(0 6px 7px rgba(40, 6, 12, .35));
+  /* le fichier porte déjà ses ombres internes : on n'ajoute qu'un liseré d'assise */
+  filter: drop-shadow(0 4px 5px rgba(40, 6, 12, .18));
   animation: invite 2.8s ease-in-out infinite;
 }
 .sceau:focus-visible { outline: 2px solid var(--or); outline-offset: 5px; border-radius: 50%; }
+/* Sceau intact : une seule copie affichée. Deux demi-images côte à côte laissent voir
+   la couture de la fissure (chacune projette son ombre). Les moitiés n'apparaissent
+   qu'au moment où la cire se brise. */
+.sceau-entier {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  transition: opacity .1s linear;
+}
 .sceau-moitie {
   position: absolute; inset: 0; width: 100%; height: 100%;
+  visibility: hidden;
   transition: transform .9s var(--douceur), opacity .8s ease;
 }
-/* fissure en zigzag au centre de la cire */
-.sceau-gauche  { clip-path: polygon(0 0, 57% 0, 53% 14%, 59% 27%, 52% 40%, 58% 52%, 54% 64%, 57% 100%, 0 100%); }
-.sceau-droite  { clip-path: polygon(57% 0, 100% 0, 100% 100%, 57% 100%, 54% 64%, 58% 52%, 52% 40%, 59% 27%, 53% 14%); }
+.enveloppe.brise .sceau-entier { opacity: 0; }
+.enveloppe.brise .sceau-moitie { visibility: visible; }
+/* fissure en zigzag au centre de la cire (entre les deux rubans) */
+.sceau-gauche  { clip-path: polygon(0 0, 49% 0, 45% 12%, 50% 24%, 44% 36%, 49% 48%, 45% 62%, 49% 100%, 0 100%); }
+.sceau-droite  { clip-path: polygon(49% 0, 100% 0, 100% 100%, 49% 100%, 45% 62%, 49% 48%, 44% 36%, 50% 24%, 45% 12%); }
 .sceau-monogramme {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
   gap: .04em;
+  /* recentrage sur le médaillon (et non sur la boîte du fichier) */
+  transform: translate(-4.4%, -16.03%);
   font-family: var(--script);
-  font-size: clamp(16px, 4.6vw, 23px);
+  font-size: clamp(14px, 4.2vw, 22px);
   line-height: 1;
   color: #f6dfca;
   text-shadow: 0 1px 1px rgba(40, 6, 12, .5), 0 -1px 1px rgba(255, 255, 255, .16);
@@ -636,7 +653,14 @@ h2 {
     var(--ivoire) url("assets/papier.svg") repeat;
   background-size: auto, 600px;
 }
-.sceau-merci { width: 112px; margin: 0 auto 0; filter: drop-shadow(0 6px 8px rgba(40, 6, 12, .25)); }
+.sceau-merci {
+  position: relative;
+  display: block;
+  width: 112px;
+  margin: 0 auto 10px;
+}
+.sceau-merci img { width: 100%; display: block; filter: drop-shadow(0 5px 7px rgba(40, 6, 12, .22)); }
+.sceau-monogramme-petit { font-size: 15px; }
 .etiquette-contact {
   margin: 4px 0 12px; font-size: 15.5px; font-style: italic; color: var(--encre-douce);
 }

@@ -34,8 +34,10 @@
     $$(".monogramme").forEach((el) => {
       el.innerHTML = `${ia}<span>&amp;</span>${ib}`;
     });
-    const mono = $(".sceau-monogramme");
-    if (mono) mono.innerHTML = `${ia}<b>&amp;</b>${ib}`;
+    const monos = $$(".sceau-monogramme");
+    monos.forEach((el) => {
+      el.innerHTML = `${ia}<b>&amp;</b>${ib}`;
+    });
 
     // Photo facultative de la page « Notre jour ». ?photo=nom.jpg = aperçu sans toucher config.js
     const apercuPhoto = new URLSearchParams(location.search).get("photo");
