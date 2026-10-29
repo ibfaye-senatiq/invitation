@@ -6,7 +6,7 @@
    ============================================================= */
 window.INVITATION = {
   /* ---------- Les mariés ---------- */
-  prenoms: { a: 'Fadel', b: 'Fatou Bintou' },
+  prenoms: { a: 'Fadel', b: 'Fatou Binetou' },
   // Initiales utilisées dans le monogramme, le sceau et le menu.
   initiales: { a: 'F', b: 'F' },
 
@@ -20,7 +20,7 @@ window.INVITATION = {
   /* ---------- Le lieu ---------- */
   lieu: {
     nom: 'Maison Madera',
-    detail: 'Almadies, Dakar · Sénégal',
+    detail: 'Yoff, Dakar · Sénégal',
     // Coordonnées GPS : clic droit sur Google Maps → copier les coordonnées.
     coordonnees: { lat: 14.742158, lng: -17.520318 },
   },
@@ -47,7 +47,7 @@ window.INVITATION = {
       { heure: '16h00', libelle: 'Accueil & mise en place', icone: 'accueil' },
       { heure: '17h15', libelle: 'Takk', icone: 'alliances' },
       { heure: '19h30', libelle: 'Le dîner', icone: 'diner' },
-      { heure: '23h00', libelle: 'Fin de la cérémonie', icone: 'lune' },
+      { heure: '21h00', libelle: 'Fin de la cérémonie', icone: 'lune' },
     ],
   },
 
@@ -72,13 +72,13 @@ window.INVITATION = {
   /* ---------- Contacts (page « Merci ») ---------- */
   contacts: [
     { nom: 'Fadel', numero: '221781101620' },
-    { nom: 'Fatou Bintou', numero: '221785469101' },
+    { nom: 'Fatou Binetou', numero: '221785469101' },
   ],
 
   /* ---------- Photo de la page « Notre jour » (facultatif) ----------
      Déposez votre image dans assets/ et écrivez son nom ici : "photo.jpg".
      Laissez vide pour un panneau sans photo.
      photoCadrage : "haut" (portrait, visage en haut) · "centre" · "bas". */
-  photo: 'dress.jpeg',
+  photo: 'diop_couple.jpeg',
   photoCadrage: 'haut',
 }
