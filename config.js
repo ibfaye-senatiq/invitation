@@ -19,10 +19,10 @@ window.INVITATION = {
 
   /* ---------- Le lieu ---------- */
   lieu: {
-    nom: 'Maison Madera',
+    nom: 'Yoff',
     detail: 'Yoff, Dakar · Sénégal',
     // Coordonnées GPS : clic droit sur Google Maps → copier les coordonnées.
-    coordonnees: { lat: 14.742158, lng: -17.520318 },
+    coordonnees: { lat: 14.748910, lng: -17.484850 },
   },
 
   /* ---------- Les textes ---------- */
@@ -65,14 +65,14 @@ window.INVITATION = {
      Avec un serveur (Google Apps Script, Formspree, Make…), collez l'URL dans
      endpoint : la réponse y sera envoyée en POST et WhatsApp ne sera pas ouvert. */
   rsvp: {
-    whatsapp: '+14188086074',
+    whatsapp: '+14185555555',
     endpoint: '',
   },
 
   /* ---------- Contacts (page « Merci ») ---------- */
   contacts: [
-    { nom: 'Fadel', numero: '+221772653784' },
-    { nom: 'Fatou Binetou', numero: '+14188086074' },
+    { nom: 'Fadel', numero: '+221775555555' },
+    { nom: 'Fatou Binetou', numero: '+14185555555' },
   ],
 
   /* ---------- Photo de la page « Notre jour » (facultatif) ----------
