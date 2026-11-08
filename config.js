@@ -20,7 +20,7 @@ window.INVITATION = {
   /* ---------- Le lieu ---------- */
   lieu: {
     nom: 'Yoff',
-    detail: 'Yoff, Dakar · Sénégal',
+    detail: 'Dakar · Sénégal',
     // Coordonnées GPS : clic droit sur Google Maps → copier les coordonnées.
     coordonnees: { lat: 14.748910, lng: -17.484850 },
   },
